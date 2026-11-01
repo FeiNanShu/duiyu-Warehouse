@@ -9,19 +9,21 @@
    重堆叠影
    [2026 stack theme]
    by ShuXiangYue & feinansu
+   针对Liminal CN的改动：更改编辑页面按钮样式/更改保存和其他动画/增
+   加笔记块、伪标题、伪分割线。
+   
 */
-
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 :root {
     --theme-base: "black-highlighter";
     --theme-id: "liminal";
     --theme-name: "Liminal Theme";
-    --logo-image: url("https://cdn.jsdmirror.com/gh/ShuXiangYue/image/1791631638364.png
-");
+    --logo-image: url("https://s41.ax1x.com/2026/10/31/pncl4RP.png");
     --header-title: "The Multirooms";
     --header-subtitle: "堆域";
     --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Arimo, Verdana, Geneva, sans-serif;
-    --header-font: Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-    --title-font: var(--header-font);
+    --header-font: "ZCOOL KuaiLe", Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    --title-font: Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
     --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", Consolas, monaco, monospace;
     --white-monochrome: 252, 253, 255;
     --pale-gray-monochrome: 232, 245, 252;
@@ -33,7 +35,7 @@
     --medium-accent: 70, 145, 220;
     --dark-accent: 27, 100, 191;
     --pale-accent: 205, 239, 255;
-
+}
     --swatch-topmenu-border-color: var(--medium-accent);
     --link-color: 230, 23, 68;
     --hover-link-color: 187, 0, 34;
@@ -121,6 +123,7 @@ div#odialog-shader.odialog-shader {
     pointer-events: none;
     inset: 0 0 auto auto;
 }
+
 iframe.scpnet-interwiki-frame {
     border: inherit;
     width: 100%;
@@ -136,6 +139,7 @@ a.newpage {
 blockquote {
     box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
 }
+
 
 .styled-quote {
     background-color: rgb(var(--pale-gray-monochrome));
@@ -166,7 +170,7 @@ blockquote {
 }
 
 .darkblock {
-    background-color: rgb(var(--gray-monochrome));
+    background-color: rgb(58, 82, 108);
     color: rgb(var(--white-monochrome));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0 0.5rem 0.25rem;
@@ -234,6 +238,8 @@ blockquote {
 .scp-image-block {
     min-width: 30%;
 }
+
+
 .sd-container {
     --sd-font: Poppins, Noto Sans SC, Noto Serif SC;
     --sd-font-size: 16px;
@@ -303,15 +309,11 @@ div.wiki-note {
    box-shadow: 2px;
    border: 3px solid rgb(var(--gray-monochrome));
 }
- 
 @media screen and (min-width:768px) {
 #header::before{
 background-position:50% -65px;
 }
 }
-
-
-
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css");
 
 #wd-editor-toolbar-panel a {
@@ -473,6 +475,12 @@ margin: 0;
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+
+.owindow.owait .content {
+    background-image: none !important;
 }
-
-
+.divider {
+    max-height: 2px;
+    min-height: 2px;
+    background-color: rgb(var(--gray-monochrome));
+}
