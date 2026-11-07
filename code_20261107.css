@@ -1,0 +1,132 @@
+:root {
+  --white-text-color:#ffffff;
+  --black-text-color:#000000;
+  --tag-color: 78, 78, 78;
+
+  --safe-color:0,159,107;
+  --euclid-color:255,211,0;
+  --keter-color:196,2,51;
+  --thaumiel-color:80, 1, 188;
+  --neutralized-color:66,66,72;
+  --explained-color:255,255,255;
+  --pending-color:12,12,12;
+
+  --safe-img-src: url(https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/safe-icon.svg);
+  --euclid-img-src: url(https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/euclid-icon.svg);
+  --keter-img-src: url(https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/keter-icon.svg);
+  --thaumiel-img-src: url(https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/thaumiel-icon.svg);
+  --neutralized-img-src: url(https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/neutralized-icon.svg);
+  --explained-img-src: url(https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/explained-icon.svg);
+  --pending-img-src: url(https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/pending-icon.svg);
+}
+
+.row {
+  display: flex;
+  gap: 0;
+}
+.left {
+  flex-basis: 80%;
+  box-sizing: border-box;
+}
+.right {
+  flex-basis: 20%;
+  box-sizing: border-box;
+  display: flex;
+}
+.ffffff {
+  font-size:2em;
+  font-weight: bold;
+}
+.width {
+  width: 80%;
+}
+.bg-container {
+  margin-left: auto;
+  margin-right: auto;
+  height: 105px;
+  border: 3px solid var(--black-text-color);
+}
+.round-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:3px solid var(--black-text-color);
+  margin: auto;
+}
+
+.Safe {
+  background-color: rgb(var(--safe-color));
+  color: var(--white-text-color);
+}
+.Euclid {
+  background-color: rgb(var(--euclid-color));
+  color: var(--white-text-color);
+}
+.Keter {
+  background-color: rgb(var(--keter-color));
+  color: var(--white-text-color);
+}
+.Thaumiel {
+  background-color: rgb(var(--thaumiel-color));
+  color: var(--white-text-color);
+}
+.Neutralized {
+  background-color: rgb(var(--neutralized-color));
+  color: var(--white-text-color);
+}
+.Explained {
+  background-color: rgb(var(--explained-color));
+  color: var(--black-text-color);
+}
+.Pending {
+  background-color: rgb(var(--pending-color));
+  color: var(--white-text-color);
+}
+
+.Safe-img {
+  background-image: var(--safe-img-src);
+}
+.Euclid-img {
+  background-image: var(--euclid-img-src);
+}
+.Keter-img {
+  background-image: var(--keter-img-src);
+}
+.Thaumiel-img {
+  background-image: var(--thaumiel-img-src);
+}
+.Neutralized-img {
+  background-image: var(--neutralized-img-src);
+}
+.Explained-img {
+  background-image: var(--explained-img-src);
+}
+.Pending-img {
+  background-image: var(--pending-img-src);
+}
+.tag-shape {
+  display: inline-block;
+  min-width: 60px;
+  height: 21px;
+  position: relative;
+  background-color: rgb(var(--tag-color));
+  border-radius: 4px 4px 4px 4px;
+  clip-path: polygon(
+    8px 50%,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 4px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 21px;
+  margin-right: 3ch;
+}
