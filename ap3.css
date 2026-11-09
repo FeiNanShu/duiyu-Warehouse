@@ -170,7 +170,7 @@ blockquote {
 }
 
 .darkblock {
-    background-color: rgb(58, 82, 108);
+    background-color: rgb(var(--gray-monochrome));
     color: rgb(var(--white-monochrome));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0 0.5rem 0.25rem;
