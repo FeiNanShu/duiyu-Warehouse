@@ -8,10 +8,8 @@
 </div>
 
 ## 介绍
-WikiDot站点[堆域](https://rooms-wiki-cn.wikidot.com/ "点这里就跳转了!")
-
-
+WikiDot站点[堆域](https://rooms-wiki-cn.wikidot.com/ "点这里就跳转了!")是一个backrooms民间分站，其许多代码都托管在github。本仓库除特殊注明外，均遵守CC-by-sa3.0协议。
 <details>
-<summary>📝 更多信息</summary>
-隐藏内容
+<summary>仓库持有者：FeiNanShu(feinansu)</summary>
+feinansu是该站管理，负责杂7杂8的事。
 </details>
