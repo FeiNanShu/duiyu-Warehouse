@@ -484,3 +484,39 @@ margin: 0;
     min-height: 2px;
     background-color: rgb(var(--gray-monochrome));
 }
+.owindow.owait .content {
+    background-image: none;
+}
+.divider {
+    max-height: 2px;
+    min-height: 2px;
+    background-color: rgb(var(--gray-monochrome));
+}
+body a {
+    text-decoration: none;
+    font-weight: bold;
+}
+:root {
+    --sidebar-width-on-desktop: calc((var(--base-font-size) * (14 / 15)) * 19);
+    --body-width-on-desktop: 45.75rem;
+}
+#main-content::after {
+        content: " ";
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1rem;
+        height: 100%;
+        max-height: 100%;
+        top: 0;
+        transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1), background-position 300ms cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        left: 1rem;
+        background: url("https://ai-games.wikidot.com/local--files/start/sidebar-svg.svg");
+        background-repeat: no-repeat;
+        background-position: center left 1rem;
+        background-attachment: fixed;
+        background-size: 1rem 12.875rem;
+        pointer-events: none;
+}
