@@ -1,0 +1,523 @@
+/*
+   基于Liminal Theme
+   Liminal Theme
+   [2020 Wikidot Theme]
+   by Lynch & Etoile
+   Edited by Lambda Core & irisluscinia & hoah2333 & Ambersight
+*/
+/*
+   重堆叠影
+   [2026 stack theme]
+   by ShuXiangYue & feinansu
+   针对Liminal CN的改动：更改编辑页面按钮样式/更改保存和其他动画/增
+   加笔记块、伪标题、伪分割线。
+   
+*/
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+:root {
+    --theme-base: "black-highlighter";
+    --theme-id: "liminal";
+    --theme-name: "Liminal Theme";
+    --logo-image: url("data:image/svg+xml,%3Csvg%20viewBox='0%200%202772%202772'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20desc='Created%20with%20imagetracer.js%20version%201.2.6'%20%3E%3Cpath%20fill='rgb(0,0,0)'%20stroke='rgb(0,0,0)'%20stroke-width='0'%20opacity='0'%20d='M%200%200%20L%202772%200%20L%202772%202772%20L%200%202772%20L%200%200%20Z%20M%20272%20826%20L%20272%201049%20L%20302%201059%20L%20381%201081%20L%20825%201214%20L%20830%201214%20L%20830%201125%20L%20836%201122%20L%20835%201121%20L%20965%201038%20L%20966%201036%20L%20970%201034%20L%20971%201032%20L%20282%20827%20L%20272%20826%20Z%20M%202496%20826%20L%201804%201032%20Q%201800%201031%201801%201034%20L%201805%201036%20L%201806%201038%20L%201815%201042%20L%201816%201044%20L%201918%201108%20L%201919%201110%20L%201928%201114%20L%201929%201116%20L%201936%201119%20L%201936%201122%20L%201941%201123%20L%201942%201125%20L%201942%201214%20L%201952%201213%20L%202011%201194%20L%202026%201191%20L%202392%201081%20L%202434%201070%20L%202500%201049%20L%202500%20827%20L%202496%20826%20Z%20M%201384%20867%20L%201089%201038%20L%201087%201040%20L%201040%201066%20L%201038%201068%20L%20894%201150%20L%20889%201155%20L%20889%201726%20L%20902%201735%20L%201030%201808%20Q%201032%201790%201028%201776%20L%201028%201258%20L%201045%201249%20L%201046%201247%20L%201055%201244%20L%201149%201189%20L%201150%201187%20L%201272%201118%20L%201273%201116%20L%201312%201095%20L%201312%201342%20L%201313%201344%20L%201385%201385%20L%201392%201383%20L%201459%201344%20L%201460%201342%20L%201460%201095%20L%201497%201116%20Q%201500%201115%201499%201118%20L%201725%201247%20L%201726%201249%20L%201744%201258%20L%201744%201776%20Q%201741%201790%201742%201808%20L%201880%201729%20L%201883%201726%20L%201883%201155%20L%201871%201145%20L%201736%201068%20L%201734%201066%20L%201688%201040%20Q%201684%201041%201685%201038%20L%201393%20869%20L%201384%20867%20Z%20M%20436%201132%20L%20436%201355%20L%20676%201427%20L%20728%201441%20L%20750%201449%20L%20762%201451%20L%20784%201459%20L%20829%201471%20L%20830%201470%20L%20830%201249%20L%20463%201138%20L%20436%201132%20Z%20M%202332%201132%20L%201963%201241%20L%201942%201249%20L%201942%201470%20L%201944%201471%20L%202161%201408%20L%202186%201399%20L%202232%201387%20Q%202280%201370%202333%201357%20L%202336%201355%20L%202336%201133%20L%202332%201132%20Z%20M%201103%201299%20L%201100%201300%20L%201099%201303%20L%201100%201307%20L%201099%201532%20L%201100%201849%20L%201332%201983%20Q%201336%201981%201335%201985%20L%201374%202007%20Q%201377%202006%201376%202009%20L%201382%202012%20Q%201391%202014%201395%202009%20L%201396%202007%20L%201436%201986%20L%201437%201983%20L%201445%201981%20L%201492%201952%20L%201495%201952%20L%201671%201850%20L%201672%201849%20L%201673%201699%20L%201672%201532%20L%201673%201306%20L%201672%201300%20L%201670%201299%20L%201666%201299%20L%201543%201370%20L%201539%201375%20L%201540%201760%20L%201387%201849%20L%201232%201760%20L%201233%201758%20L%201232%201755%20L%201232%201753%20L%201233%201750%20L%201232%201746%20L%201232%201744%20L%201233%201741%20L%201232%201739%20L%201233%201736%20L%201232%201733%20L%201232%201731%20L%201233%201727%20L%201232%201724%20L%201232%201722%20L%201233%201719%20L%201232%201715%20L%201232%201713%20L%201233%201710%20L%201232%201706%20L%201232%201704%20L%201233%201701%20L%201232%201698%20L%201232%201696%20L%201233%201692%20L%201232%201689%20L%201232%201687%20L%201233%201683%20L%201232%201680%20L%201232%201678%20L%201233%201675%20L%201232%201671%20L%201232%201669%20L%201233%201666%20L%201232%201662%20L%201232%201660%20L%201233%201657%20L%201232%201654%20L%201232%201652%20L%201233%201648%20L%201232%201645%20L%201232%201643%20L%201233%201639%20L%201232%201636%20L%201232%201634%20L%201233%201631%20L%201232%201627%20L%201232%201625%20L%201233%201622%20L%201232%201618%20L%201232%201616%20L%201233%201613%20L%201232%201610%20L%201232%201608%20L%201233%201604%20L%201232%201601%20L%201232%201599%20L%201233%201595%20L%201232%201592%20L%201232%201590%20L%201233%201582%20L%201232%201579%20L%201232%201577%20L%201233%201573%20L%201232%201570%20L%201232%201568%20L%201233%201560%20L%201232%201557%20L%201232%201555%20L%201233%201551%20L%201232%201548%20L%201232%201546%20L%201233%201538%20L%201232%201373%20L%201107%201299%20L%201103%201299%20Z%20M%201314%201415%20L%201312%201417%20L%201312%201731%20L%201314%201736%20L%201321%201740%20Q%201324%201739%201323%201742%20L%201385%201777%20L%201394%201774%20L%201457%201737%20L%201460%201731%20L%201460%201417%20L%201459%201415%20L%201389%201456%20L%201384%201456%20L%201371%201449%20L%201314%201415%20Z%20M%201386%201434%20L%201384%201438%20Q%201389%201440%201388%201436%20L%201386%201434%20Z%20M%20612%201439%20L%20612%201661%20L%20618%201664%20L%20626%201665%20L%20829%201726%20L%20830%201724%20L%20830%201505%20L%20829%201502%20L%20633%201443%20L%20612%201439%20Z%20M%202156%201439%20L%201943%201502%20L%201942%201505%20L%201942%201725%20L%201944%201726%20L%202147%201665%20L%202155%201664%20L%202160%201661%20L%202160%201440%20L%202156%201439%20Z%20%3C/path%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d='M%20272%20826%20L%20281.5%20827%20L%20971%201032%20L%20969.5%201034%20L%20966%201036%20L%20964.5%201038%20L%20835%201120.5%20L%20835.5%201122%20L%20830%201124.5%20L%20830%201213.5%20L%20824.5%201214%20L%20380.5%201081%20L%20301.5%201059%20L%20272%201048.5%20L%20272%20826%20Z%20M%20277%20830%20L%20276%201047%20L%20826%201210%20L%20827%201120%20L%20844%201113%20L%20963%201037%20L%20964%201034%20L%20277%20830%20Z%20'%20/%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d='M%202495.5%20826%20L%202500%20826.5%20L%202500%201048.5%20L%202433.5%201070%20L%202391.5%201081%20L%202025.5%201191%20L%202010.5%201194%20L%201951.5%201213%20L%201942%201214%20L%201942%201124.5%20L%201940.5%201123%20L%201936%201121.5%20L%201935.5%201119%20L%201929%201116%20L%201927.5%201114%20L%201919%201110%20L%201917.5%201108%20L%201816%201044%20L%201814.5%201042%20L%201806%201038%20L%201804.5%201036%20L%201801%201034%20Q%201799.8%201031%201803.5%201032%20L%202495.5%20826%20Z%20M%202496%20830%20L%201811%201034%20L%201808%201036%20L%201929%201113%20L%201945%201120%20L%201947%201210%20L%202496%201047%20L%202496%20830%20Z%20'%20/%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d='M%201383.5%20867%20L%201392.5%20869%20L%201685%201038%20Q%201683.8%201041%201687.5%201040%20L%201734%201066%20L%201735.5%201068%20L%201870.5%201145%20L%201883%201154.5%20L%201883%201725.5%20L%201879.5%201729%20L%201742%201808%20Q%201740.5%201789.7%201744%201775.5%20L%201744%201258%20L%201726%201249%20L%201724.5%201247%20L%201499%201118%20Q%201500.3%201115%201496.5%201116%20L%201460%201095%20L%201460%201341.5%20L%201459%201344%20L%201391.5%201383%20L%201384.5%201385%20L%201313%201344%20L%201312%201341.5%20L%201312%201095%20L%201273%201116%20L%201271.5%201118%20L%201150%201187%20L%201148.5%201189%20L%201054.5%201244%20L%201046%201247%20L%201044.5%201249%20L%201028%201258%20L%201028%201775.5%20Q%201031.5%201789.7%201030%201808%20L%20901.5%201735%20L%20889%201725.5%20L%20889%201154.5%20L%20893.5%201150%20L%201038%201068%20L%201039.5%201066%20L%201087%201040%20L%201088.5%201038%20L%201383.5%20867%20Z%20M%201386%20869%20L%20894%201153%20L%20891%201156%20L%20891%201725%20L%201026%201803%20L%201027%201805%20L%201028%201805%20L%201027%201256%20L%201313%201092%20L%201314%201094%20L%201314%201341%20L%201385%201381%20L%201396%201377%20L%201458%201341%20L%201458%201094%20L%201460%201092%20L%201744%201256%20Q%201747%201255%201745%201260%20L%201745%201264%20L%201746%201266%20L%201745%201268%20L%201746%201271%20L%201745%201273%20L%201746%201276%20L%201745%201278%20L%201745%201280%20L%201746%201284%20L%201745%201286%20L%201746%201289%20L%201745%201291%20L%201745%201293%20L%201746%201297%20L%201745%201299%20L%201746%201302%20L%201745%201304%20L%201745%201308%20L%201746%201310%20L%201745%201312%20L%201746%201315%20L%201745%201317%20L%201746%201320%20L%201745%201322%20L%201745%201324%20L%201746%201328%20L%201745%201330%20L%201746%201333%20L%201745%201335%20L%201745%201337%20L%201746%201341%20L%201745%201343%20L%201746%201346%20L%201745%201348%20L%201745%201352%20L%201746%201354%20L%201745%201356%20L%201746%201359%20L%201745%201361%20L%201746%201364%20L%201745%201366%20L%201745%201368%20L%201746%201372%20L%201745%201374%20L%201746%201377%20L%201745%201379%20L%201745%201381%20L%201746%201383%20L%201746%201385%20L%201745%201387%20L%201745%201389%20L%201746%201392%20L%201745%201394%20L%201746%201397%20L%201745%201400%20L%201745%201402%20L%201746%201405%20L%201745%201409%20L%201745%201411%20L%201746%201414%20L%201745%201416%20L%201746%201419%20L%201745%201422%20L%201745%201424%20L%201746%201427%20L%201745%201431%20L%201745%201433%20L%201746%201436%20L%201745%201438%20L%201746%201441%20L%201745%201444%20L%201745%201446%20L%201746%201449%20L%201745%201453%20L%201745%201455%20L%201746%201458%20L%201745%201460%20L%201746%201463%20L%201745%201466%20L%201745%201468%20L%201746%201472%20L%201745%201475%20L%201745%201477%20L%201746%201480%20L%201745%201484%20L%201745%201486%20L%201746%201489%20L%201745%201491%20L%201746%201494%20L%201745%201497%20L%201745%201499%20L%201746%201502%20L%201745%201506%20L%201745%201508%20L%201746%201511%20L%201745%201513%20L%201746%201516%20L%201745%201519%20L%201745%201521%20L%201746%201524%20L%201745%201528%20L%201745%201530%20L%201746%201533%20L%201745%201535%20L%201746%201538%20L%201745%201541%20L%201745%201543%20L%201746%201546%20L%201745%201550%20L%201745%201552%20L%201746%201555%20L%201745%201557%20L%201746%201560%20L%201745%201563%20L%201745%201565%20L%201746%201568%20L%201745%201572%20L%201745%201574%20L%201746%201577%20L%201745%201579%20L%201746%201582%20L%201745%201585%20L%201745%201587%20L%201746%201591%20L%201745%201594%20L%201745%201596%20L%201746%201599%20L%201745%201603%20L%201745%201605%20L%201746%201608%20L%201745%201610%20L%201746%201613%20L%201745%201616%20L%201745%201618%20L%201746%201621%20L%201745%201625%20L%201745%201627%20L%201746%201630%20L%201745%201632%20L%201746%201635%20L%201745%201638%20L%201745%201640%20L%201746%201643%20L%201745%201647%20L%201745%201649%20L%201746%201652%20L%201745%201654%20L%201746%201657%20L%201745%201660%20L%201745%201662%20L%201746%201665%20L%201745%201669%20L%201745%201671%20L%201746%201674%20L%201745%201676%20L%201746%201679%20L%201745%201682%20L%201745%201684%20L%201746%201687%20L%201745%201691%20L%201745%201693%20L%201746%201696%20L%201745%201698%20L%201746%201701%20L%201745%201704%20L%201745%201706%20L%201746%201710%20L%201745%201713%20L%201745%201715%20L%201746%201718%20L%201745%201720%20L%201746%201722%20L%201745%201724%20L%201746%201726%20L%201745%201728%20L%201746%201730%20L%201745%201733%20L%201746%201735%20L%201745%201737%20L%201746%201739%20L%201745%201742%20L%201746%201744%20L%201745%201746%20L%201746%201750%20L%201746%201752%20L%201745%201755%20L%201746%201757%20L%201745%201759%20L%201746%201761%20L%201745%201764%20L%201746%201766%20L%201745%201768%20L%201746%201770%20L%201745%201773%20L%201746%201775%20L%201744%201798%20L%201745%201805%20L%201745%201803%20L%201878%201728%20L%201881%201725%20L%201881%201156%20L%201775%201092%20L%201386%20869%20Z%20'%20/%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d='M%20436%201132%20L%20462.5%201138%20L%20830%201248.5%20L%20830%201469.5%20L%20828.5%201471%20L%20783.5%201459%20L%20761.5%201451%20L%20749.5%201449%20L%20727.5%201441%20L%20675.5%201427%20L%20436%201354.5%20L%20436%201132%20Z%20M%20439%201136%20L%20439%201352%20L%20446%201355%20L%20824%201467%20L%20826%201467%20L%20826%201250%20L%20439%201136%20Z%20'%20/%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d='M%202331.5%201132%20L%202336%201132.5%20L%202336%201354.5%20L%202332.5%201357%20Q%202279.6%201369.6%202231.5%201387%20L%202185.5%201399%20L%202160.5%201408%20L%201943.5%201471%20L%201942%201469.5%20L%201942%201248.5%20L%201962.5%201241%20L%202331.5%201132%20Z%20M%202331%201136%20L%201949%201250%20L%201946%201251%20L%201946%201467%20L%202232%201382%20L%202247%201379%20L%202306%201360%20L%202314%201359%20L%202333%201352%20L%202333%201137%20L%202331%201136%20Z%20'%20/%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d='M%201102.5%201299%20L%201106.5%201299%20L%201232%201372.5%20L%201233%201537.5%20L%201232%201545.5%20L%201232%201547.5%20L%201233%201550.5%20L%201232%201554.5%20L%201232%201556.5%20L%201233%201559.5%20L%201232%201567.5%20L%201232%201569.5%20L%201233%201572.5%20L%201232%201576.5%20L%201232%201578.5%20L%201233%201581.5%20L%201232%201589.5%20L%201232%201591.5%20L%201233%201594.5%20L%201232%201598.5%20L%201232%201600.5%20L%201233%201603.5%20L%201232%201607.5%20L%201232%201609.5%20L%201233%201612.5%20L%201232%201615.5%20L%201232%201617.5%20L%201233%201621.5%20L%201232%201624.5%20L%201232%201626.5%20L%201233%201630.5%20L%201232%201633.5%20L%201232%201635.5%20L%201233%201638.5%20L%201232%201642.5%20L%201232%201644.5%20L%201233%201647.5%20L%201232%201651.5%20L%201232%201653.5%20L%201233%201656.5%20L%201232%201659.5%20L%201232%201661.5%20L%201233%201665.5%20L%201232%201668.5%20L%201232%201670.5%20L%201233%201674.5%20L%201232%201677.5%20L%201232%201679.5%20L%201233%201682.5%20L%201232%201686.5%20L%201232%201688.5%20L%201233%201691.5%20L%201232%201695.5%20L%201232%201697.5%20L%201233%201700.5%20L%201232%201703.5%20L%201232%201705.5%20L%201233%201709.5%20L%201232%201712.5%20L%201232%201714.5%20L%201233%201718.5%20L%201232%201721.5%20L%201232%201723.5%20L%201233%201726.5%20L%201232%201730.5%20L%201232%201732.5%20L%201233%201735.5%20L%201232%201738.5%20L%201233%201740.5%20L%201232%201743.5%20L%201232%201745.5%20L%201233%201749.5%20L%201232%201752.5%20L%201232%201754.5%20L%201233%201757.5%20L%201232%201759.5%20L%201386.5%201849%20L%201540%201759.5%20L%201539%201374.5%20L%201542.5%201370%20L%201665.5%201299%20L%201669.5%201299%20L%201672%201300%20L%201673%201305.5%20L%201672%201531.5%20L%201673%201698.5%20L%201672%201848.5%20L%201670.5%201850%20L%201494.5%201952%20L%201491.5%201952%20L%201444.5%201981%20L%201437%201983%20L%201435.5%201986%20L%201396%202007%20L%201394.5%202009%20Q%201391.4%202013.9%201381.5%202012%20L%201376%202009%20Q%201377.3%202006%201373.5%202007%20L%201335%201984.5%20Q%201335.9%201981.5%201331.5%201983%20L%201100%201848.5%20L%201099%201531.5%20L%201100%201306.5%20L%201099%201302.5%20L%201100%201300%20L%201102.5%201299%20Z%20M%201104%201302%20L%201102%201304%20L%201101%201533%20L%201102%201538%20L%201101%201557%20L%201102%201613%20L%201101%201685%20L%201102%201687%20L%201101%201689%20L%201102%201691%20L%201101%201693%20L%201102%201696%20L%201101%201698%20L%201102%201700%20L%201101%201704%20L%201101%201706%20L%201102%201709%20L%201101%201711%20L%201102%201713%20L%201101%201715%20L%201102%201718%20L%201101%201720%20L%201102%201722%20L%201101%201726%20L%201101%201728%20L%201102%201731%20L%201101%201735%20L%201101%201737%20L%201102%201740%20L%201101%201742%20L%201102%201744%20L%201101%201746%20L%201102%201749%20L%201101%201751%20L%201102%201753%20L%201101%201757%20L%201101%201759%20L%201102%201762%20L%201101%201766%20L%201101%201768%20L%201102%201771%20L%201101%201773%20L%201102%201775%20L%201101%201779%20L%201101%201781%20L%201102%201784%20L%201101%201788%20L%201101%201790%20L%201102%201793%20L%201101%201795%20L%201102%201797%20L%201101%201801%20L%201101%201803%20L%201102%201806%20L%201101%201810%20L%201101%201812%20L%201102%201815%20L%201101%201817%20L%201102%201819%20L%201101%201823%20L%201101%201825%20L%201102%201828%20L%201101%201832%20L%201101%201834%20L%201102%201837%20L%201101%201839%20L%201102%201841%20L%201101%201845%20L%201101%201847%20L%201386%202011%20L%201671%201847%20L%201670%201684%20L%201671%201612%20L%201670%201556%20L%201671%201537%20L%201670%201304%20L%201669%201302%20L%201657%201307%20L%201544%201373%20L%201541%201380%20L%201541%201762%20L%201387%201851%20L%201234%201764%20L%201231%201762%20L%201230%201375%20L%201116%201307%20L%201104%201302%20Z%20'%20/%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d='M%201108%201311%20L%201110%201312.5%20L%201108.5%201377%20L%201108%201311%20Z%20'%20/%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d='M%201662%201311%20L%201664%201311.5%20L%201664%201376.5%20L%201663%201376.5%20L%201663%201313.5%20L%201662%201311%20Z%20'%20/%3E%3Cpath%20fill='rgb(255,255,255)'%20stroke='rgb(255,255,255)'%20stroke-width='0'%20opacity='0.9764705882352941'%20d
+");
+    --header-title: "The Multirooms";
+    --header-subtitle: "堆域";
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Arimo, Verdana, Geneva, sans-serif;
+    --header-font: "ZCOOL KuaiLe", Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    --title-font: Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", Consolas, monaco, monospace;
+    --white-monochrome: 252, 253, 255;
+    --pale-gray-monochrome: 232, 245, 252;
+    --light-gray-monochrome: 164, 193, 215;
+    --gray-monochrome: 58, 82, 108;
+    --black-monochrome: 18, 35, 55;
+
+    --bright-accent: 173, 227, 255;
+    --medium-accent: 70, 145, 220;
+    --dark-accent: 27, 100, 191;
+    --pale-accent: 205, 239, 255;
+
+    --swatch-topmenu-border-color: var(--medium-accent);
+    --link-color: 230, 23, 68;
+    --hover-link-color: 187, 0, 34;
+    --visited-link-color: 150, 24, 43;
+    --background-gradient-distance: 0rem;
+    --gradient-header: linear-gradient(to top,
+            rgba(var(--medium-accent)) 0%,
+            rgba(78, 154, 245, 0.90) 100%);
+    --diagonal-stripes: linear-gradient(transparent 0);
+
+    --rename-option: "记住：堆域用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: (代表的该页面被删除)前缀，以方便工作人员追踪与核查。";
+}
+#header::before {
+    background-size: auto 17rem;
+}
+@media screen and (max-width: 768px) {
+    #header::before {
+        background-size: auto 14rem;
+    }
+}
+#skrollr-body {
+    background-image: radial-gradient(circle,
+            rgb(var(--medium-accent)) 50%,
+            transparent 0);
+    background-repeat: repeat;
+    background-size: 0.25em 0.25em;
+    width: 100%;
+    height: 7.5rem;
+}
+
+#header,
+#top-bar {
+    background-attachment: scroll;
+}
+
+#header h1 {
+  transition: 0.3s ease all;
+}
+#header h1:hover {
+  transform: translateY(-8px);
+  box-shadow:8px 8px 16px rgba(0, 0, 0, 0.2);
+}
+div.scpnet-interwiki-wrapper {
+    margin: 0;
+    width: auto;
+
+    #side-bar & {
+        min-height: 220px;
+        transform: translate(0, 0);
+
+        @media only screen and (max-width: 768px) {
+            width: calc(var(--sidebar-width-on-mobile) - 0.5rem);
+            max-width: calc(80vw + var(--base-font-size) * 0.5);
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+/* Message on Delete/Rename/Move */
+#rename-option-rename,
+#rename-option-delete {
+    &::before {
+        content: var(--rename-option);
+        color: rgb(211, 54, 120);
+        display: block;
+    }
+}
+
+/* Non SavingPage 黑标版 */
+iframe#odialog-shader-iframe {
+    display: none;
+}
+
+div#odialog-shader.odialog-shader {
+    display: block;
+    position: fixed;
+    z-index: 40;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(var(--swatch-menubg-black-color), 0.5);
+    pointer-events: none;
+    inset: 0 0 auto auto;
+}
+
+iframe.scpnet-interwiki-frame {
+    border: inherit;
+    width: 100%;
+    height: 220px;
+}
+
+a.newpage {
+    background: transparent;
+    text-decoration: none;
+    color: rgb(var(--newpage-color));
+}
+
+blockquote {
+    box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
+}
+
+
+.styled-quote {
+    background-color: rgb(var(--pale-gray-monochrome));
+    border-left: 0.5rem solid rgba(var(--gray-monochrome));
+    padding: 0.1rem 1rem;
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
+}
+
+.dark-styled-quote {
+    background-color: rgb(var(--gray-monochrome));
+    border-left: 0.5rem solid rgba(var(--pale-gray-monochrome));
+    color: rgb(var(--white-monochrome));
+    padding: 0.1rem 1rem;
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
+
+    & a {
+        color: rgb(var(--swatch-menubg-medium-color));
+    }
+}
+
+.lightblock {
+    background-color: rgb(var(--pale-gray-monochrome));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(var(--black-monochrome), 0.25);
+}
+
+.darkblock {
+    background-color: rgb(var(--gray-monochrome));
+    color: rgb(var(--white-monochrome));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(var(--black-monochrome), 0.25);
+
+    & a {
+        color: rgb(var(--swatch-menubg-medium-color));
+    }
+}
+
+/* Content Warning */
+#page-content div#u-adult-warning {
+    width: fit-content;
+    margin: 0 auto 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 3px solid #333;
+    background: #e4e4e4;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+
+    &>div#u-adult-header {
+        font-size: 300%;
+        text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+        color: #901;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &>.error-block {
+        color: unset;
+        padding: unset;
+        margin: unset;
+        border: unset;
+        margin-bottom: 1em;
+    }
+}
+
+
+
+/* Message on Delete/Rename/Move */
+#rename-option-rename,
+#rename-option-delete {
+    &::before {
+        content: var(--rename-option);
+        color: red;
+        display: block;
+    }
+}
+
+
+
+/* Footer */
+#footer {
+
+    &,
+    a {
+        color: rgb(var(--white-monochrome));
+    }
+}
+
+/* Image Block */
+.scp-image-block {
+    min-width: 30%;
+}
+
+
+.sd-container {
+    --sd-font: Poppins, Noto Sans SC, Noto Serif SC;
+    --sd-font-size: 16px;
+    --sd-background: 30, 48, 75;
+    --sd-border: 80, 80, 80;
+    --sd-border-secondary: 24, 88, 190;
+    --sd-border-deadzone: 15, 30, 60;
+    --sd-symbol: 80, 80, 80 !important;
+    --sd-symbol-secondary: 255, 255, 255;
+    --sd-bullets: 80, 80, 80 !important;
+    --sd-text: 0, 0, 0;
+    --sd-text-secondary: 255, 255, 255;
+    --class-0: 120, 200, 245;
+    --class-1: 95, 170, 230;
+    --class-2: 70, 150, 220;
+    --class-3: 45, 120, 205;
+    --class-4: 24, 88, 190;
+    --class-5: 15, 60, 140;
+    --class-unknown: 30, 48, 75;
+    --class-habitable: 70, 150, 220;
+    --class-deadzone: 15, 30, 60;
+    --class-pending: 140, 180, 220;
+    --class-n-a: 30, 48, 75;
+    --class-amended: 120, 200, 245;
+    --class-omega: 24, 88, 190;
+}
+::selection {
+    background: rgb(160, 10, 35);
+    color: rgb(var(--white-monochrome));
+}
+::-moz-selection {
+    background: rgb(160, 10, 35);
+    color: rgb(var(--white-monochrome));
+}
+
+#skrollr-body {
+    background-image: none;
+}
+#toc-list {
+  max-height: 145px !important;
+  overflow-y: scroll !important;
+  max-width: 400px !important;
+}
+#toc {
+  background: rgb(var(--pale-gray-monochrome));
+  border: 3px solid rgb(var(--gray-monochrome));
+}
+
+#toc-list::-webkit-scrollbar {
+   width: 8px;
+ }
+ #toc-list::-webkit-scrollbar-thumb {
+   background: rgb(var(--gray-monochrome));
+   border-radius: 4px;
+ }
+ #toc-list::-webkit-scrollbar-track {
+   background: rgb(var(--very-light-gray-monochrome));
+ }
+ /* 火狐兼容 */
+ #toc-list {
+   scrollbar-width: thin;
+   scrollbar-color: rgb(var(--gray-monochrome)) rgb(var(--very-light-gray-monochrome));
+}
+
+div.wiki-note {
+   background: rgb(var(--medium-accent));
+   box-shadow: 2px;
+   border: 3px solid rgb(var(--gray-monochrome));
+}
+@media screen and (min-width:768px) {
+#header::before{
+background-position:50% -65px;
+}
+}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css");
+
+#wd-editor-toolbar-panel a {
+    background-image: none !important;
+    position: relative !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+#wd-editor-toolbar-panel a::before {
+    font-family: "FontAwesome" !important;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    font-size: 16px;
+    color: #333;
+}
+.wd-editor-toolbar-btn:hover {
+  background: #b8d0ee;
+}
+
+/* 标题组 */
+.weditor-h1::before { content: "\f1dc"; }
+.weditor-h2::before { content: "H2"; }
+.weditor-h3::before { content: "H3"; }
+.weditor-h4::before { content: "H4"; }
+.weditor-h5::before { content: "H5"; }
+.weditor-h6::before { content: "H6"; }
+
+/* 文字格式化 */
+.weditor-bold::before { content: "\f032"; }
+.weditor-italic::before { content: "\f033"; }
+.weditor-underline::before { content: "\f0cd"; }
+.weditor-strikethrough::before { content: "\f0cc"; }
+.weditor-teletype::before { content: "tt"; }
+.weditor-quote::before { content: "\f10e"; }
+.weditor-superscript::before { content: "\f0aa"; }
+.weditor-subscript::before { content: "\f0ab"; }
+.weditor-raw::before { content: "R"; }
+/* 分割线、块、浮动清除 */
+.weditor-hr::before { content: "\f068"; }
+.weditor-div::before, .weditor-divwiz::before { content: "\f009"; }
+.weditor-clearfloat::before { content: "\f0ec"; }
+.weditor-clearfloatleft::before { content: "\f036"; }
+.weditor-clearfloatright::before { content: "\f038"; }
+
+
+/* TOC目录、表格 */
+.weditor-toc::before { content: "toc"; }
+.weditor-table::before,
+.weditor-tablewiz::before { content: "\f0ce"; }
+
+/* 链接向导组（wiz=弹窗向导，截图带星） */
+.weditor-uri::before, .weditor-uriwiz::before { content: "\f0c6"; }
+.weditor-pagelink::before, .weditor-pagelinkwiz::before { content: "\f0c1"; }
+.weditor-image::before, .weditor-imagewiz::before { content: "\f03e"; }
+.weditor-code::before, .weditor-codewiz::before { content: "\f121"; }
+.weditor-html::before { content: "\f1c9"; }
+
+/* 列表、缩进、定义列表、脚注 */
+.weditor-numlist::before { content: "\f0cb"; }
+.weditor-bullist::before { content: "\f0ca"; }
+.weditor-incindent::before { content: "\f03c"; }
+.weditor-decindent::before { content: "\f03b"; }
+.weditor-deflist::before { content: "\f022"; }
+.weditor-footnote::before { content: "\f041"; }
+
+/* 公式、引用 */
+.weditor-math::before { content: "\f1b2"; }
+.weditor-mathinline::before { content: "\f1b3"; }
+.weditor-eqref::before { content: "\f104"; }
+.weditor-bib::before { content: "\f02d"; }
+.weditor-bibcite::before { content: "\f02e"; }
+
+.meta-title {
+border-bottom: solid 1px rgb(18, 35, 55);
+font-weight: normal;
+margin: 0 0 0.6em;
+padding: 0 0 0.25em;
+font-size: 200%;
+}
+.meta-title p {
+margin: 0;
+}
+#edit-page-textarea {
+  outline: none;
+  border: 1px solid #7799bb;
+}
+#edit-page-textarea:focus {
+  outline: none;
+  border: 1px solid #3377dd;
+}
+#edit-page-summary {
+  outline: none;
+  border: 1px solid #7799bb;
+}
+#edit-page-summary:focus {
+  outline: none;
+  border: 1px solid #3377dd;
+}
+#edit-page-title {
+  outline: none;
+  border: 1px solid #7799bb;
+}
+#edit-page-title:focus {
+  outline: none;
+  border: 1px solid #3377dd;
+}
+.owindow.owait {
+  background-color: rgb(var(--light-gray-monochrome));
+  color: rgb(var(--black-monochrome));
+  border: 2px solid rgb(var(--gray-monochrome));
+}
+.owindow.owait .wait-icon {
+  display: none;
+}
+.owindow.owait .content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  line-height: 1;
+}
+.owindow.owait .content::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgb(var(--medium-accent));
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.owindow.osuccess {
+  background-color: rgb(var(--light-gray-monochrome));
+  color: rgb(var(--black-monochrome));
+  border: 2px solid rgb(var(--gray-monochrome));
+}
+.owindow.osuccess .wait-icon {
+  display: none;
+}
+.owindow.osuccess .content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  line-height: 1;
+}
+.owindow.osuccess .content::before {
+  content: "✓";
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  color: #44bb66;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+
+.owindow.owait .content {
+    background-image: none !important;
+}
+.divider {
+    max-height: 2px;
+    min-height: 2px;
+    background-color: rgb(var(--gray-monochrome));
+}
+.owindow.owait .content {
+    background-image: none;
+}
+.divider {
+    max-height: 2px;
+    min-height: 2px;
+    background-color: rgb(var(--gray-monochrome));
+}
+body a {
+    text-decoration: none;
+    font-weight: bold;
+}
+:root {
+    --sidebar-width-on-desktop: calc((var(--base-font-size) * (14 / 15)) * 19);
+    --body-width-on-desktop: 45.75rem;
+}
+#main-content::after {
+        content: " ";
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1rem;
+        height: 100%;
+        max-height: 100%;
+        top: 0;
+        transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1), background-position 300ms cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        left: 1rem;
+        background: url("https://ai-games.wikidot.com/local--files/start/sidebar-svg.svg");
+        background-repeat: no-repeat;
+        background-position: center left 1rem;
+        background-attachment: fixed;
+        background-size: 1rem 12.875rem;
+        pointer-events: none;
+}
