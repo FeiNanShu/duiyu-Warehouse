@@ -10,9 +10,9 @@
     overflow: hidden;
     vertical-align: bottom;
 }
-.何意味 {  background-image: ("https://feinanshu.github.io/duiyu-Warehouse/image/6e.jpg");  }
-.呆傻 {  background-image: ("https://feinanshu.github.io/duiyu-Warehouse/image/88A238.png");  }
-.失望 {  background-image: ("https://feinanshu.github.io/duiyu-Warehouse/image/9ABBC.jpg");  }
-.褚嬴 {  background-image: ("https://feinanshu.github.io/duiyu-Warehouse/image/15e20.jpg");  }
-.奶娃思考 {  background-image: ("https://feinanshu.github.io/duiyu-Warehouse/image/475.jpg");  }
-.大眼睛 {  backround-image: ("https://feinanshu.github.io/duiyu-Warehouse/image/bc8.jpg")  }
+.何意味 {  background-image: url("https://feinanshu.github.io/duiyu-Warehouse/image/6e.jpg");  }
+.呆傻 {  background-image: url("https://feinanshu.github.io/duiyu-Warehouse/image/88A238.png");  }
+.失望 {  background-image: url("https://feinanshu.github.io/duiyu-Warehouse/image/9ABBC.jpg");  }
+.褚嬴 {  background-image: url("https://feinanshu.github.io/duiyu-Warehouse/image/15e20.jpg");  }
+.奶娃思考 {  background-image: url("https://feinanshu.github.io/duiyu-Warehouse/image/475.jpg");  }
+.大眼睛 {  background-image: url("https://feinanshu.github.io/duiyu-Warehouse/image/bc8.jpg");  }
