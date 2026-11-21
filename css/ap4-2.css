@@ -329,10 +329,10 @@ background-position:50% -65px;
     display: grid;
     place-content: center;
     font-size: 16px;
-    color: #333;
+    color: rgb(var(--black-monochrome));
 }
-.wd-editor-toolbar-btn:hover {
-  background: #b8d0ee;
+.wd-editor-toolbar-btn {
+  background: rgb(var(--pale-gray-monochrome);
 }
 
 /* 标题组 */
@@ -397,30 +397,6 @@ font-size: 200%;
 }
 .meta-title p {
 margin: 0;
-}
-#edit-page-textarea {
-  outline: none;
-  border: 1px solid #7799bb;
-}
-#edit-page-textarea:focus {
-  outline: none;
-  border: 1px solid #3377dd;
-}
-#edit-page-summary {
-  outline: none;
-  border: 1px solid #7799bb;
-}
-#edit-page-summary:focus {
-  outline: none;
-  border: 1px solid #3377dd;
-}
-#edit-page-title {
-  outline: none;
-  border: 1px solid #7799bb;
-}
-#edit-page-title:focus {
-  outline: none;
-  border: 1px solid #3377dd;
 }
 .owindow.owait {
   background-color: rgb(var(--light-gray-monochrome));
