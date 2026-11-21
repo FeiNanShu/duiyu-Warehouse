@@ -13,7 +13,6 @@
    加笔记块、伪标题、伪分割线。
    
 */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css");
 @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 :root {
     --theme-base: "black-highlighter";
@@ -315,6 +314,8 @@ div.wiki-note {
 background-position:50% -65px;
 }
 }
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css");
+
 #wd-editor-toolbar-panel a {
     background-image: none !important;
     position: relative !important;
@@ -328,10 +329,10 @@ background-position:50% -65px;
     display: grid;
     place-content: center;
     font-size: 16px;
-    color: rgb(var(--black-monochrome));
+    color: #333;
 }
-.wd-editor-toolbar-btn {
-  background: rgb(var(--pale-gray-monochrome);
+.wd-editor-toolbar-btn:hover {
+  background: #b8d0ee;
 }
 
 /* 标题组 */
@@ -396,6 +397,30 @@ font-size: 200%;
 }
 .meta-title p {
 margin: 0;
+}
+#edit-page-textarea {
+  outline: none;
+  border: 1px solid #7799bb;
+}
+#edit-page-textarea:focus {
+  outline: none;
+  border: 1px solid #3377dd;
+}
+#edit-page-summary {
+  outline: none;
+  border: 1px solid #7799bb;
+}
+#edit-page-summary:focus {
+  outline: none;
+  border: 1px solid #3377dd;
+}
+#edit-page-title {
+  outline: none;
+  border: 1px solid #7799bb;
+}
+#edit-page-title:focus {
+  outline: none;
+  border: 1px solid #3377dd;
 }
 .owindow.owait {
   background-color: rgb(var(--light-gray-monochrome));
@@ -494,4 +519,4 @@ body a {
         background-attachment: fixed;
         background-size: 1rem 12.875rem;
         pointer-events: none;
-}
+}          
