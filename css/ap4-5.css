@@ -321,6 +321,7 @@ background-position:50% -65px;
     position: relative !important;
     width: 24px !important;
     height: 24px !important;
+    color: rgb(var(--black-monochrome);
 }
 #wd-editor-toolbar-panel a::before {
     font-family: "FontAwesome" !important;
