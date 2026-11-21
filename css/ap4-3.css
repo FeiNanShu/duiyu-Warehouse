@@ -13,6 +13,7 @@
    加笔记块、伪标题、伪分割线。
    
 */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css");
 @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 :root {
     --theme-base: "black-highlighter";
@@ -314,8 +315,6 @@ div.wiki-note {
 background-position:50% -65px;
 }
 }
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css");
-
 #wd-editor-toolbar-panel a {
     background-image: none !important;
     position: relative !important;
