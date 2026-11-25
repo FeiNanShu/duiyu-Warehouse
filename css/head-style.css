@@ -1,3 +1,4 @@
+@import url("https://github.backroomswiki.cn/Old_BHL/css/liminal-impact.css");
 @import url("./ap4-7.css");
 @import url("./ysd-2.css");
 .owindow.owait .content {
@@ -26,8 +27,6 @@ body a {
    text-decoration: none;
    font-weight: bold;   
 }
-[[/module]]
-[[module css]]
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
 #edit-button::before {
   content: "\f044";
@@ -147,13 +146,13 @@ body a {
 #login-status,
 #login-status a {
     color: rgb(var(--white-monochrome));
-}
+    }
 #login-status {
     background-color: rgb(var(--dark-accent))!important;
     border-radius: 5px;
     padding: 2px;
     border: 2px solid rgb(var(--white-monochrome));
-  }
+}
 #account-topbutton {
     background-color: rgb(var(--dark-accent))!important;
     border: 2px solid rgb(var(--white-monochrome));
@@ -221,10 +220,30 @@ div#page-options-bottom-2 > a:hover, div#page-options-bottom > a:hover {
 #top-bar div.top-bar > ul > li > ul,
 #top-bar div.mobile-top-bar > ul > li > ul {
     background: rgba(var(--medium-accent), 0.75);
-    border: 1.25px solid rgb(var(--medium-accent));
+    border: none;
 }
 #top-bar div.top-bar > ul > li > ul > li > a,
 #top-bar div.mobile-top-bar > ul > li > ul > li > a {
     background: transparent;
     border: none !important;
-  }
+}
+#top-bar div.mobile-top-bar > ul > li > ul > li > a {
+    position: relative;
+    overflow: hidden;
+}
+#top-bar div.mobile-top-bar > ul > li > ul > li > a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 150%;
+    width: 200%;
+    height: 100%;
+    transform: skew(50deg, 0);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+    background-color: rgb(var(--dark-accent));
+}
+#top-bar div.mobile-top-bar > ul > li > ul > li > a:hover::before {
+    left: -5rem;
+}
+
