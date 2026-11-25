@@ -1,0 +1,230 @@
+@import url("./ap4-7.css");
+@import url("./ysd-2.css");
+.owindow.owait .content {
+    background-image: none;
+}
+.白沐林_点赞 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_01.png");}
+.白沐林_乖巧 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_02.png");}
+.白沐林_偷笑 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_03.png");}
+.白沐林_看看文 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_04.png");}
+.白沐林_无语 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_05.png");}
+.白沐林_犯困 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_06.png");}
+.白沐林_吓 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_07.png");}
+.白沐林_哭哭 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_08.png");}
+.白沐林_比心 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_09.png");}
+.白沐林_生气 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_10.png");}
+.白沐林_震惊 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_11.png");}
+.白沐林_疑惑 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_12.png");}
+.白沐林_去世 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_13.png");}
+.白沐林_委屈 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_14.png");}
+.白沐林_摸鱼 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_15.png");}
+.白沐林_开摆 {  background-image:url("https://backrooms-oversight-cn.wikidot.com/local--files/stickers/bml_16.png");}
+.旋转风室图标_GIF {  background-image:url("https://rooms-image-hosting.wikidot.com/local--files/picture:feinansu/sn.gif");}
+.呆傻_GIF {  background-image:url("https://rooms-image-hosting.wdfiles.com/local--files/picture%3Afeinansu/91D2E9A03A.gif");}
+.震惊_GIF {  background-image:url("https://rooms-image-hosting.wdfiles.com/local--files/picture%3Afeinansu/weqwe.gif");}
+body a {
+   text-decoration: none;
+   font-weight: bold;   
+}
+[[/module]]
+[[module css]]
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
+#edit-button::before {
+  content: "\f044";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#pagerate-button::before {
+  content: "\f005";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#tags-button::before {
+  content: "\f02c";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#discuss-button::before {
+  content: "\f086";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#history-button::before {
+  content: "\f1da";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#files-button::before {
+  content: "\f0c5";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#print-button::before {
+  content: "\f02f";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#site-tools-button::before {
+  content: "\f0ad";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+}
+#edit-sections-button::before {
+  content: "\f0ca";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#edit-append-button::before {
+  content: "\f040";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#edit-meta-button::before {
+  content: "\f013";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#watchers-button::before {
+  content: "\f0c0";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#backlinks-button::before {
+  content: "\f0c1";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+#edit-sections-button::before {
+  content: "\f1dd";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+#view-source-button::before {
+  content: "\f121";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#parent-page-button::before {
+  content: "\f062";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#page-block-button::before {
+  content: "\f023";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#rename-move-button::before {
+  content: "\f0b2";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#delete-button::before {
+  content: "\f1f8";
+  font-family: "FontAwesome";
+  margin-right: 1.2em;
+}
+
+#search-top-box-input {
+     display: none;
+}
+#login-status,
+#login-status a {
+    color: rgb(var(--white-monochrome));
+}
+#login-status {
+    background-color: rgb(var(--dark-accent))!important;
+    border-radius: 5px;
+    padding: 2px;
+    border: 2px solid rgb(var(--white-monochrome));
+  }
+#account-topbutton {
+    background-color: rgb(var(--dark-accent))!important;
+    border: 2px solid rgb(var(--white-monochrome));
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    vertical-align: middle;
+    color: rgb(var(--white-monochrome));
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2em;
+}
+#account-options {
+    background-color: rgb(var(--dark-accent));
+    border: 2px solid rgb(var(--white-monochrome));
+}
+#account-options li a {
+    color: rgb(var(--white-monochrome));
+}
+#account-options li a:hover {
+    background-color: rgb(var(--gray-monochrome));
+}
+#account-options li {
+  display: flex;
+  align-items: center;
+}
+#account-options li::after {
+  content: "";
+  flex: 1;
+  height: 3px;
+  margin-left: 0.1em;
+  background-color: rgba(var(--white-monochrome), 0.35);
+}
+.printuser {
+    font-weight: bold;
+}
+div#page-options-bottom-2 > a, div#page-options-bottom > a {
+    border: 2px solid rgb(var(--black-monochrome));
+    background-color: rgb(var(--dark-accent));
+    border-radius: 8px;
+}
+div#page-options-bottom-2 > a:hover, div#page-options-bottom > a:hover {
+    border: 2px solid rgb(var(--black-monochrome));
+    background-color: rgb(var(--white-monochrome));
+    color: rgb(var(--black-monochrome));
+}
+.page-tags,
+.page-tags span {
+   border: none;
+}
+.page-tags::before {
+   content: "标签▼";
+   display: block;
+   margin-bottom: 0.25em;
+   font-weight: bold;
+   margin-left: 0.25em;
+}
+.page-tags a {
+   background-color: rgb(var(--dark-accent));
+   border-radius: 6px;
+   padding: 0.2em 0.6em;
+   color: rgb(var(--white-monochrome));
+}
+
+#top-bar div.top-bar > ul > li > ul,
+#top-bar div.mobile-top-bar > ul > li > ul {
+    background: rgba(var(--medium-accent), 0.75);
+    border: 1.25px solid rgb(var(--medium-accent));
+}
+#top-bar div.top-bar > ul > li > ul > li > a,
+#top-bar div.mobile-top-bar > ul > li > ul > li > a {
+    background: transparent;
+    border: none !important;
+  }
