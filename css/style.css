@@ -247,12 +247,12 @@ div#page-options-bottom-2 > a:hover, div#page-options-bottom > a:hover {
     left: -5rem;
 }
 #edit-save-button::before {
-  content: "f0c7";
+  content: "\f0c7";
   font-family: "FontAwesome";
   margin-right: 1.2em;
 }
 #edit-save-continue-button::before {
-  content: "f0c7";
+  content: "\f0c7";
   font-family: "FontAwesome";
   margin-right: 1.2em;
 }
@@ -272,7 +272,7 @@ div#page-options-bottom-2 > a:hover, div#page-options-bottom > a:hover {
   margin-right: 1.2em;
 }
 #edit-cancel-button::before {
-  content: "f00d";
+  content: "\f00d";
   font-family: "FontAwesome";
   margin-right: 1.2em;
 }
